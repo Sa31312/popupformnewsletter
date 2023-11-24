@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+    :root{
+      --Tomato: hsl(4, 100%, 67%);
+      --Dark_Slate_Grey: hsl(234, 29%, 20%);
+      --Charcoal-Grey: hsl(235, 18%, 26%);
+      --Grey: hsl(231, 7%, 60%);
+      --White: hsl(0, 0%, 100%);
+    }
+    body{
+      font-family: 'Roboto', sans-serif;
+      
+      background: var(--Dark_Slate_Grey);
+    }
+    .flex,.message{
+      
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      
+    }
+    .main-container {
+        border-radius: 17px;
+        padding: 20px;
+        background: var(--White);
+        /*display: flex;
+        justify-content: space-between;
+        align-items: center;
+*/      width: 100%;
+        max-width: 900px;
+    }
+    .second-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 900px;
+    }
+    .main-text {
+        margin-left: 50px;
+        width: 100%;
+        max-width: 500px;
+    }
+    .main-text h1 {
+        font-size: 55px;
+    }
+    p.text {
+        font-size: 16px;
+        width: 400px;
+        line-height: 20px;
+    }
+    .icon-text p {
+       
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .icon-text p img{
+      margin-right: 19px;
+      vertical-align: middle;
+    }
+    .icon-list {
+        margin-bottom: 30px;
+    }
+    .form_field label {
+        display: block;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    input#mail {
+        padding: 16px 12px;
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid gray;
+        font-size: 16px;
+        margin-bottom: 20px;
+        max-width: 360px;
+    }
+    input.btn.subscribe-btn {
+    width: 100%;
+    max-width: 387px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    background: var(--Charcoal-Grey);
+    color: white;
+  }
+  input.btn.subscribe-btn:hover{
+    background: var(--Tomato);
+    cursor: pointer;
+  }
+  .message-container{
+    display: none;
+    border-radius: 17px;
+        padding: 30px 20px;
+        background: var(--White);
+        width: 100%;
+        max-width: 500px;
+  }
+  .list-text-icon{
+    width: 100%;
+    max-width: 65px;
+  }
+  .box-text{
+    width: 100%;
+    max-width: 500px;
+  }
+  .box-text h1{
+    font-size: 55px;
+  }
+  .mail-text p {
+      width: 100%;
+      max-width: 370px;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }
+  span.email {
+      font-weight: bold;
+      font-size: 16px;
+  }
+  .for-error {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 350px;
+  }
+  input#mail.error {
+      border-color: #f16267;
+      background: #f162624a;
+      color: #f16267;
+  }
+  .show-error-msg{
+    color: #f16267; 
+  }
+  </style>
+</head>
+<body>
+  <div class="flex">
+    <div class="main-container" >
+        <div class="second-content">
+          <div class="main-text">
+            <h1>
+              Stay Updated!
+            </h1>
+            <p class="text">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <div class="icon-list">
+              <div class="icon-text">
+                <p><img src="assets/images/icon-list.svg">Product discovery and building what matters</p>
+              </div>
+              <div class="icon-text">
+                
+                <p><img src="assets/images/icon-list.svg">Measuring to ensure updates are a success</p>
+              </div>
+              <div class="icon-text">
+                
+                <p><img src="assets/images/icon-list.svg">And much more!</p>
+              </div>
+            </div>
+            <div class="form">
+              <form id="emailformdata">
+              <div class="form_field">
+                <div class="for-error">
+                  <label for="mail">Email address</label>
+                  <div class="show-error-msg"></div>  
+                </div>
+                
+                <input type="text" id="mail" placeholder="email@company.com" >
+              </div>
+              <div class="btn">
+                <input type="submit" id="subbtn" class="btn subscribe-btn" value="Subscribe to monthly newsletter">
+              </div>
+            </form>
+            </div>
+          </div>
+          <div class="main-img">
+            <img src="assets/images/illustration-sign-up-desktop.svg" class="fullImg">
+          </div>
+        </div>
+        
+      </div>
+  </div>
+  
+    <div class="message" >
+      <div class="message-container">
+          <div class="box-content">
+            <div class="box-text">
+              <img src="assets/images/icon-list.svg" class="list-text-icon">
+              <h1>
+                Thanks for subscribing!
+              </h1>
+              <div class="mail-text">
+                <p>
+                  A confirmation email has been sent to <span class="email">ash@loremcompany.com</span>. 
+                  Please open it and click the button inside to confirm your subscription.
+      
+                </p>
+                <input type="submit" id="dismissbtn" class="btn subscribe-btn" value="Dismiss message">
+                
+                </div>
+              
+            </div>
+            
+          </div>
+          
+      </div>
+    </div>
+    
+  <!-- Sign-up form start -->
+<!-- 
+  Stay updated!
+
+  Join 60,000+ product managers receiving monthly updates on:
+
+  Product discovery and building what matters
+  Measuring to ensure updates are a success
+  And much more!
+
+  Email address
+  email@company.com
+
+  Subscribe to monthly newsletter -->
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <!-- Thanks for subscribing!
+
+  A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.
+
+  Dismiss message -->
+
+  <!-- Success message end -->
+  
+<script  src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  jQuery(document).ready(function(){
+    jQuery('#subbtn').on('click',function(e){
+      e.preventDefault();
+
+      // console.log('click');
+
+      var mailtext= jQuery('#mail').val();
+      if (mailtext.trim() !== '' && isValidEmail(mailtext)) {
+          console.log('Success');
+          jQuery('.flex').fadeOut();
+          jQuery('#mail').removeClass('error');
+          jQuery('.message-container').fadeIn();
+          jQuery('.show-error-msg').empty();
+          jQuery('.email').empty().text(mailtext);
+      } else {
+        var texttoerror='Valid Email Required';
+        jQuery('.show-error-msg').text(texttoerror);
+          jQuery('#mail').addClass('error');
+          jQuery('#mail').attr('placeholder', '');
+          console.log('Valid Email Required');
+      }
+
+      // Function to check if the input is a valid email address
+      function isValidEmail(email) {
+          // Use a regular expression for basic email format validation
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+      }
+      // console.log("mailtext"+mailtext);
+      
+    });
+    // jQuery('#emailformdata').on('submit', function(e) {
+    //     e.preventDefault();
+
+    //     // console.log('submit');
+        
+    //     var mailtext = jQuery('#mail').val();
+    //     if (mailtext.trim() !== '' && isValidEmail(mailtext)) {
+    //         console.log('Success');
+    //         jQuery('#mail').removeClass('error');
+    //         jQuery('.message-container').fadeIn();
+
+    //         // Check again before submitting the form
+    //         if (confirm("Do you want to submit the form?")) {
+    //             jQuery('#emailformdata').submit();
+    //         }
+    //     } else {
+    //         jQuery('#mail').addClass('error');
+    //         console.log('Valid Email Required');
+    //     }
+
+    //     // Function to check if the input is a valid email address
+    //     function isValidEmail(email) {
+    //         // Use a regular expression for basic email format validation
+    //         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //         return emailRegex.test(email);
+    //     }
+    // });
+
+
+    jQuery('#dismissbtn').on('click',function(e){
+      e.preventDefault();
+      // console.log('click');
+      jQuery('.flex').fadeIn();
+      jQuery('.message-container').fadeOut();
+    });
+
+  });
+</script>
+</body>
+</html>

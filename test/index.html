@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: sans-serif, cursive;
+		}
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			position: relative;
+			width: 100%;
+			min-height: 100vh;
+			background-color: #333;
+		}
+		.container {
+			width: 100%;
+			max-width: 1440px;
+			padding: 0 15px;
+			margin: 0 auto;
+		}
+		section {
+			padding: 70px 0;
+		}
+		.img_editor_container {
+			display: flex;
+			justify-content: space-between;
+		}
+		.img_editor_container .img_editor {
+			width: 100%;
+			max-width: 50%;
+		}
+		.img_bg {
+			width: 120px;
+		}
+		.img_bg .img {
+			width: 100%;
+			cursor: pointer;
+		}
+		.img_editor {
+			display: flex;
+			justify-content: space-between;
+		}
+		.img_output_container_2 {
+			display: none;
+		}
+		.img_output_container {
+			width: 100%;
+			max-width: 80%;
+			height: 400px;
+		}
+		.img_output_container .bg_img {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			transition: 0.5s;
+		}
+		.img_output_container .bg_img .upper_img {
+			position: absolute;
+			top: 66px;
+			right: 50%;
+			width: 100%;
+			max-width: 150px;
+			transform: translate(50%, 0px);
+		}
+		.img_output_container .bg_img {
+			background-image: url(https://i.imgur.com/wN4Fq6Q.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.org_img_output_container .bg_img .upper_img {
+			position: absolute;
+			left: 0%;
+			top: 20%;
+			max-width: 224px;
+			transform: none;
+		}
+		.img_output_container .bg_img .upper_img .img {
+			width: 100%;
+		}
+		.frame_style .custom_size .size_list {
+			display: flex;
+			gap: 20px;
+			justify-content: space-between;
+			list-style: none;
+		}
+		.frame_style .custom_size .size_list .size_item {
+			font-size: 20px;
+			background-color: white;
+			border: 2px solid #ccc;
+			padding: 5px 10px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		.custom_size {
+			padding: 50px 0 20px;
+		}
+		.frame_container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			padding: 30px 0;
+		}
+		.frame_container .frame {
+			width: 100px;
+			height: 100px;
+		}
+		.frame_container .frame .frame_inner {
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="img_editor_container">
+				<div class="img_editor">
+					<div class="img_bg_container">
+						<div class="img_bg org_img_bg">
+							<img class="img" src="https://dvart.io/wp-content/themes/salient-child/cache/img/10192037560.jpg">
+						</div>
+						<div class="img_bg">
+							<img class="img" src="https://i.imgur.com/9ZzxRhY.jpg">
+						</div>
+						<div class="img_bg">
+							<img class="img" src="https://i.imgur.com/sH2kFJ3.jpg">
+						</div>
+					</div>
+					<div class="img_output_container org_img_output_container">
+						<div class="bg_img">
+							<div class="upper_img">
+								<img class="img" src="https://dvart.io/wp-content/uploads/2023/05/digital-visions-1-1.png">
+							</div>
+						</div>
+					</div>
+					<div class="img_output_container img_output_container_2">
+						<div class="bg_img">
+							<div class="upper_img">
+								<img class="img" src="https://dvart.io/wp-content/themes/salient-child/cache/img/10192037560.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="frame_style">
+					<div class="custom_size">
+						<ul class="size_list">
+							<li>
+								<div class="size_item select" customSize="130">16 X 16</div>
+							</li>
+							<li>
+								<div class="size_item" customSize="140">20 X 20</div>
+							</li>
+							<li>
+								<div class="size_item" customSize="150">24 X 24</div>
+							</li>
+							<li>
+								<div class="size_item" customSize="160">30 X 30</div>
+							</li>
+							<li>
+								<div class="size_item" customSize="170">36 X 36</div>
+							</li>
+							<li>
+								<div class="size_item" customSize="180">48 X 48</div>
+							</li>
+						</ul>
+					</div>
+					<div class="frame_container">
+						<div class="frame">
+							<div frameColor="#6e4f3d" class="frame_inner shape_7" style="background-image: url(&quot;https://bayphoto.com/images/framed-matted-prints/frames/frames_Barnwood_WhiteWashed_LG_Cap_150px.jpg&quot;);"></div>
+						</div>
+						<div class="frame">
+							<div frameColor="#746c6a" class="frame_inner shape_14" style="background-image: url(&quot;https://bayphoto.com/images/framed-matted-prints/frames/Americana_Elegance_Black_02.jpg&quot;);"></div>
+						</div>
+						<div class="frame">
+							<div frameColor="#d59d4a" class="frame_inner shape_15" style="background-image: url(&quot;https://bayphoto.com/images/framed-matted-prints/frames/Americana_Elegance_Gold_02.jpg&quot;);"></div>
+						</div>
+						<div class="frame">
+							<div frameColor="#d9d2cc" class="frame_inner shape_16" style="background-image: url(&quot;https://bayphoto.com/images/framed-matted-prints/frames/Gallery_Series_Bevel_White_02.jpg&quot;);"></div>
+						</div>
+						<div class="frame">
+							<div frameColor="#332b29" class="frame_inner shape_11" style="background-image: url(&quot;https://bayphoto.com/images/framed-matted-prints/frames/frames_Block_SatinBlack_150px.jpg&quot;);"></div>
+						</div>
+						<div class="frame">
+							<div frameColor="#292732" class="frame_inner shape_12" style="background-image: url(&quot;https://bayphoto.com/images/framed-matted-prints/frames/frames_box-black_150px.jpg&quot;);"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script  src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		jQuery(".img_bg_container .img_bg .img").on("click", function () {
+			let bg_link = jQuery(this).attr("src");
+			jQuery(".img_output_container .bg_img").css(
+				"background-image",
+				"url(" + bg_link + ")"
+			);
+		});
+		jQuery(".img_bg_container .img_bg.org_img_bg .img").on("click", function () {
+			jQuery(".org_img_output_container").show();
+			jQuery(".img_output_container_2").hide();
+		});
+		jQuery(".img_bg_container .img_bg:not(.org_img_bg) .img").on(
+			"click",
+			function () {
+				jQuery(".org_img_output_container").hide();
+				jQuery(".img_output_container_2").show();
+			}
+		);
+		jQuery(".frame_container .frame .frame_inner").on("click", function () {
+			jQuery(".img_output_container_2 .bg_img .upper_img .img").css(
+				"outline",
+				"10px solid " + jQuery(this).attr("frameColor")
+			);
+		});
+		jQuery(".frame_style .size_list .size_item").on("click", function () {
+			jQuery(".img_output_container .bg_img .upper_img").css(
+				"max-width",
+				jQuery(this).attr("customsize") + "px"
+			);
+			jQuery(".img_output_container .bg_img .upper_img").css(
+				"max-height",
+				jQuery(this).attr("customsize") + "px"
+			);
+		});
+
+	</script>
+</body>
+</html>
