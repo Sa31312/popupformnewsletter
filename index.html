@@ -150,6 +150,49 @@
   .show-error-msg{
     color: #f16267; 
   }
+  @media screen and (max-width: 576px) {
+    body{
+      margin: 0px;
+      padding: 0px;
+    }
+    .main-container{
+      border-radius: 0px;
+     
+    }
+
+    .flex{
+      display: block;
+    }
+    .main-container{
+      display: block;
+      max-width: 100%;
+    }
+    .second-content {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .main-text{
+      order: 2;
+      max-width: 220px;
+      margin-left: 25px;
+    }
+    .main-text h1{
+      font-size:32px;
+    }
+    .main-text p{
+      width: 100%;
+    }
+    .main-img img{
+      width: 250px;
+      order:1;
+    }
+  }
+  @media screen and(max-width: 269px) {
+    .main-text{
+      margin-left: 0px;
+
+    }
+  }
   </style>
 </head>
 <body>
